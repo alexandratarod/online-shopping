@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.ProductsController">
+   <children>
+      <ImageView fitHeight="474.0" fitWidth="833.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../homepage.jpg" />
+         </image></ImageView>
+      <ScrollPane layoutX="12.0" layoutY="59.0" prefHeight="370.0" prefWidth="680.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="679.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../redlipstick.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Red Lipstick">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 25$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="217.0" layoutY="206.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../redlipstick.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Red Lipstick">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 25$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Home" />
+      <Button layoutX="622.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Cart" />
+      <Label layoutX="277.0" layoutY="4.0" prefHeight="44.0" prefWidth="150.0" text="Products" textFill="#4b1162">
+         <font>
+            <Font name="Bodoni Bd BT Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
