@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="homepageform" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.HomePageController">
+<AnchorPane fx:id="homepageform" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.HomePageController">
    <children>
       <ImageView fitHeight="556.0" fitWidth="807.0" layoutX="-80.0" layoutY="-62.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../homepage.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="welcometext" layoutX="145.0" layoutY="56.0" text="Welcome to A&amp;F Makeup Store!" textFill="#5b246b">
+      <Label fx:id="welcometext" layoutX="149.0" layoutY="57.0" text="Welcome to A&amp;F Makeup Store!" textFill="#5b246b">
          <font>
             <Font name="Bodoni Bd BT Bold" size="30.0" />
          </font>
@@ -22,16 +25,16 @@
             <Font name="Perpetua" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="OurProductsButton" layoutX="265.0" layoutY="281.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="175.0" text="Our Products">
+      <Button fx:id="OurProductsButton" layoutX="276.0" layoutY="281.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="175.0" text="Our Products" onAction="#onOurProductsButtonClick">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font></Button>
-      <ImageView fx:id="lipstickphoto" fitHeight="145.0" fitWidth="206.0" layoutX="16.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="lipstickphoto" fitHeight="145.0" fitWidth="206.0" layoutX="36.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../lipstick.jpeg" />
          </image>
       </ImageView>
-      <ImageView fx:id="mascaraphoto" fitHeight="148.0" fitWidth="206.0" layoutX="477.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mascaraphoto" fitHeight="148.0" fitWidth="206.0" layoutX="486.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../mascara.jpg" />
          </image>

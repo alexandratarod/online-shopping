@@ -26,7 +26,7 @@ public class LoginController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("homepage-form.fxml"));
        // root = FXMLLoader.load(getClass().getResource("homepage-form.fxml"));
 
-        ProdutctsApplication homepageapplication = loader.getController();
+        //ProdutctsApplication homepageapplication = loader.getController();
 
 
         root = loader.load();
