@@ -16,9 +16,9 @@
          <font>
             <Font name="Bodoni Bd BT Bold" size="24.0" />
          </font></Label>
-      <Button fx:id="LoginButton" layoutX="447.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Login" onAction="#onLoginButtonClick" />
-      <Button fx:id="RegisterButton" layoutX="537.0" layoutY="266.0" mnemonicParsing="false" text="Register" />
-      <ComboBox fx:id="RoleComboBox" layoutX="448.0" layoutY="316.0" prefWidth="150.0" promptText="Role" />
+      <Button fx:id="LoginButton" layoutX="447.0" layoutY="291.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="59.0" text="Login" />
+      <Button fx:id="RegisterButton" layoutX="538.0" layoutY="291.0" mnemonicParsing="false" onAction="#onRegistrationButtonClick" text="Register" />
+      <ComboBox fx:id="rolecombobox" layoutX="447.0" layoutY="246.0" prefWidth="150.0" promptText="Role" />
       <Label fx:id="username" layoutX="370.0" layoutY="166.0" text="Username">
          <font>
             <Font name="Arial" size="14.0" />
@@ -29,5 +29,6 @@
          </font></Label>
       <PasswordField fx:id="passwordfield" layoutX="448.0" layoutY="203.0" />
       <TextField fx:id="usernamefield" layoutX="448.0" layoutY="161.0" />
+      <Label fx:id="registration" layoutX="509.0" layoutY="346.0" text="Label" />
    </children>
 </AnchorPane>
