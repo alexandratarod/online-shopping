@@ -1,5 +1,7 @@
 package com.example.onlinestore;
 
+import com.example.onlinestore.servicies.FileSystemService;
+import com.example.onlinestore.servicies.NitriteDB;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,14 +13,14 @@ import java.nio.file.Path;
 
 import java.io.IOException;
 
-public class LoginApplication extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
         initDirectory();
         NitriteDB.initDatabase();
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-form.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 410);
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-form.fxml"));
+        Scene scene = new Scene(loader.load(), 700, 410);
         stage.setTitle("A&F Makeup Store");
         stage.setScene(scene);
         stage.show();
@@ -31,8 +33,6 @@ public class LoginApplication extends Application {
     }
 
     public static void main(String[] args) {
-
-
         launch();
     }
 }

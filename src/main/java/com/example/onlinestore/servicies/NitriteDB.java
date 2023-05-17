@@ -1,5 +1,7 @@
-package com.example.onlinestore;
+package com.example.onlinestore.servicies;
 
+import com.example.onlinestore.exceptions.UsernameAlreadyExistsException;
+import com.example.onlinestore.model.User;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.dizitart.no2.objects.filters.ObjectFilters;
@@ -10,14 +12,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 
-import static com.example.onlinestore.FileSystemService.getPathToFile;
+import static com.example.onlinestore.servicies.FileSystemService.getPathToFile;
 
 public class NitriteDB {
     private static ObjectRepository<User> userRepository;
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("online-store.db").toFile())
+                .filePath(getPathToFile("onlinestore.db").toFile())
                 .openOrCreate("test", "test");
 
         userRepository = database.getRepository(User.class);
@@ -39,7 +41,7 @@ public class NitriteDB {
         }
     }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 

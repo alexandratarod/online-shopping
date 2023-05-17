@@ -1,4 +1,4 @@
-package com.example.onlinestore;
+package com.example.onlinestore.exceptions;
 
 public class UsernameAlreadyExistsException extends Exception {
 

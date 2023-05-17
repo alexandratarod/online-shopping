@@ -1,4 +1,4 @@
-package com.example.onlinestore;
+package com.example.onlinestore.servicies;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

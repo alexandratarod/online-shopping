@@ -9,11 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="453.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.CartController">
+<AnchorPane prefHeight="453.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.CartController">
    <children>
       <ImageView fitHeight="476.0" fitWidth="733.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../homepage.jpg" />
+            <Image url="@homepage.jpg" />
          </image>
       </ImageView>
       <Button fx:id="ProductsButtonFromCart" layoutX="28.0" layoutY="24.0" mnemonicParsing="false" onAction="#onProductsButtonFromCartClick" prefHeight="33.0" prefWidth="78.0" text="Products" />

@@ -1,8 +1,6 @@
-package com.example.onlinestore;
+package com.example.onlinestore.model;
 
 import org.dizitart.no2.objects.Id;
-
-import java.util.Objects;
 
 public class User {
     @Id

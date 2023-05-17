@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.ProductsController">
+<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.ProductsController">
    <children>
       <ImageView fitHeight="474.0" fitWidth="833.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../homepage.jpg" />
+            <Image url="@homepage.jpg" />
          </image></ImageView>
       <ScrollPane layoutX="12.0" layoutY="59.0" prefHeight="370.0" prefWidth="680.0">
         <content>
@@ -19,7 +19,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../redlipstick.jpeg" />
+                              <Image url="@redlipstick.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Red Lipstick">
@@ -34,7 +34,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../pinklipstick.png" />
+                              <Image url="@pinklipstick.png" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Pink Lipstick">
@@ -50,7 +50,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../gloss.jpeg" />
+                              <Image url="@gloss.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Gloss">
@@ -66,7 +66,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../mattelipstick.jpeg" />
+                              <Image url="@mattelipstick.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Matte Lipstick">
@@ -82,7 +82,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../blackmascara.jpeg" />
+                              <Image url="@blackmascara.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Black Mascara">
@@ -98,7 +98,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../longlashes.jpeg" />
+                              <Image url="@longlashes.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Long Lashes">
@@ -114,7 +114,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../lashes.jpeg" />
+                              <Image url="@lashes.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Lashes">
@@ -130,7 +130,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../facecream.jpeg" />
+                              <Image url="@facecream.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Face Cream">
@@ -146,7 +146,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../foundation.jpeg" />
+                              <Image url="@foundation.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Foundation">
@@ -162,7 +162,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../blush.jpeg" />
+                              <Image url="@blush.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Blush">
@@ -178,7 +178,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../iluminator.jpeg" />
+                              <Image url="@iluminator.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Iluminator">
@@ -194,7 +194,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../blushpalette.jpeg" />
+                              <Image url="@blushpalette.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Blush palette">
@@ -210,7 +210,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../eyeshadow.jpeg" />
+                              <Image url="@eyeshadow.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Eyeshadow">
@@ -226,7 +226,7 @@
                      <children>
                         <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../remover.jpeg" />
+                              <Image url="@remover.jpeg" />
                            </image>
                         </ImageView>
                         <Label prefHeight="10.0" prefWidth="67.0" text="Remover">

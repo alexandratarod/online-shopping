@@ -1,4 +1,4 @@
-package com.example.onlinestore;
+package com.example.onlinestore.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,13 +11,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ProductsController {
+public class CartController {
 
     @FXML
-    private Button HomeButtonFromProductsClick;
+    private Button PlaceorderButtonFormCart;
 
     @FXML
-    private Button CartButtonFromProductsClick;
+    private Button ProductsButtonFromCart;
 
     private Stage stage;
     private Scene scene;
@@ -25,10 +25,9 @@ public class ProductsController {
     private Parent root;
 
     @FXML
-    protected void onHomeButtonFromProductsClick(ActionEvent event) throws IOException {
+    protected void onPlaceorderButtonFromCartClick(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("homepage-form.fxml"));
-
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("placeorder-form.fxml"));
 
 
         root = loader.load();
@@ -40,9 +39,9 @@ public class ProductsController {
     }
 
     @FXML
-    protected void onCartButtonFromProductsClick(ActionEvent event) throws IOException {
+    protected void onProductsButtonFromCartClick(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-form.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("products-form.fxml"));
 
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -52,3 +51,4 @@ public class ProductsController {
 
     }
 }
+
