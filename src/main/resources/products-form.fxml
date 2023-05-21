@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.ProductsController">
+<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.ProductsController">
    <children>
       <ImageView fitHeight="474.0" fitWidth="833.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -241,12 +245,13 @@
                </children></AnchorPane>
         </content>
       </ScrollPane>
-      <Button fx:id="HomeButtonFromProducts" layoutX="14.0" layoutY="13.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="69.0" text="Home" onAction="#onHomeButtonFromProductsClick" />
-      <Button fx:id="CartButtonFromProducts" layoutX="622.0" layoutY="13.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="69.0" text="Cart" onAction="#onCartButtonFromProductsClick" />
+      <Button fx:id="HomeButtonFromProducts" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#onHomeButtonFromProductsClick" prefHeight="25.0" prefWidth="69.0" text="Home" />
+      <Button fx:id="CartButtonFromProducts" layoutX="622.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCartButtonFromProductsClick" prefHeight="25.0" prefWidth="69.0" text="Cart" />
       <Label layoutX="277.0" layoutY="4.0" prefHeight="44.0" prefWidth="150.0" text="Products" textFill="#4b1162">
          <font>
             <Font name="Bodoni Bd BT Bold" size="36.0" />
          </font>
       </Label>
+      <Button layoutX="501.0" layoutY="13.0" mnemonicParsing="false" text="Manage Products" />
    </children>
 </AnchorPane>

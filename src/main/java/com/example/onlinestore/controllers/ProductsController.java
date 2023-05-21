@@ -1,5 +1,6 @@
 package com.example.onlinestore.controllers;
 
+import com.example.onlinestore.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +24,7 @@ public class ProductsController {
     private Scene scene;
 
     private Parent root;
+
 
     @FXML
     protected void onHomeButtonFromProductsClick(ActionEvent event) throws IOException {
@@ -51,4 +53,5 @@ public class ProductsController {
         stage.show();
 
     }
+
 }
