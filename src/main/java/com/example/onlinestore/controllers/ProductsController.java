@@ -20,6 +20,9 @@ public class ProductsController {
     @FXML
     private Button CartButtonFromProductsClick;
 
+    @FXML
+    private Button ManageProductsButton;
+
     private Stage stage;
     private Scene scene;
 
@@ -52,6 +55,17 @@ public class ProductsController {
         stage.setScene(scene) ;
         stage.show();
 
+    }
+
+    @FXML
+    protected void OnManageProductsButtonClick(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("manageproducts-form.fxml"));
+
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
