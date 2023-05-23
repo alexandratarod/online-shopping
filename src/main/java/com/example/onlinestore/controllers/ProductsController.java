@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import com.example.onlinestore.servicies.NitriteDB;
 
 import java.io.IOException;
 
@@ -27,6 +28,15 @@ public class ProductsController {
     private Scene scene;
 
     private Parent root;
+
+    /*public void initialize() {
+        User currentUser = NitriteDB.getUser(NitriteDB.getUsername());
+        if (currentUser != null && currentUser.getRole().equals("admin")) {
+            ManageProductsButton.setVisible(true);
+        } else {
+            ManageProductsButton.setVisible(false);
+        }
+    }*/
 
 
     @FXML

@@ -3,6 +3,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -15,7 +17,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.onlinestore.controllers.ManageProductsController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.ManageProductsController">
    <ImageView fitHeight="487.0" fitWidth="769.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@homepage.jpg" />
@@ -36,12 +38,21 @@
                </color>
             </DropShadow>
          </effect>
-         <TableView layoutX="-15.0" layoutY="6.0" prefHeight="150.4" prefWidth="678.4" style="-fx-border-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E); -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <ScrollPane prefHeight="150.4" prefWidth="678.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="151.0" prefWidth="678.0">
+                  <children>
+                     <ScrollBar orientation="VERTICAL" prefHeight="151.2" prefWidth="678.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  </children>
+               </AnchorPane>
+           </content>
+         </ScrollPane>
+         <TableView fx:id="ProductsTableView" layoutX="-15.0" layoutY="6.0" prefHeight="150.4" prefWidth="678.4" style="-fx-border-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E); -fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columns>
-               <TableColumn prefWidth="75.0" style="-fx-background-color: #FF5F9E;" text="ID Product" />
-               <TableColumn prefWidth="200.800048828125" style="-fx-background-color: #FF5F9E;" text="Product Name" />
-               <TableColumn prefWidth="130.39996337890625" style="-fx-background-color: #FF5F9E;" text="Price" />
-               <TableColumn prefWidth="136.800048828125" style="-fx-background-color: #FF5F9E;" text="Stock" />
+               <TableColumn fx:id="IDProduct_col" prefWidth="75.0" style="-fx-background-color: #FF5F9E;" text="ID Product" />
+               <TableColumn fx:id="ProductName_col" prefWidth="200.800048828125" style="-fx-background-color: #FF5F9E;" text="Product Name" />
+               <TableColumn fx:id="Price_col" prefWidth="130.39996337890625" style="-fx-background-color: #FF5F9E;" text="Price" />
+               <TableColumn fx:id="Stock_col" prefWidth="136.800048828125" style="-fx-background-color: #FF5F9E;" text="Stock" />
             </columns>
             <columnResizePolicy>
                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -57,25 +68,25 @@
             </DropShadow>
          </effect>
          <Label layoutX="48.0" layoutY="22.0" text="ID Product:" />
-         <TextField layoutX="118.0" layoutY="18.0" prefHeight="26.0" prefWidth="90.0">
+         <TextField fx:id="idproductfield" layoutX="118.0" layoutY="18.0" prefHeight="26.0" prefWidth="90.0">
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
          </TextField>
          <Label layoutX="34.0" layoutY="60.0" text="Product name:" />
-         <TextField layoutX="118.0" layoutY="56.0" prefHeight="26.0" prefWidth="126.0">
+         <TextField fx:id="productnamefield" layoutX="118.0" layoutY="56.0" prefHeight="26.0" prefWidth="126.0">
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
          </TextField>
          <Label layoutX="298.0" layoutY="23.0" text="Price:" />
          <Label layoutX="296.0" layoutY="60.0" text="Stock:" />
-         <TextField layoutX="333.0" layoutY="18.0" prefHeight="26.0" prefWidth="90.0" promptText="0.0$">
+         <TextField fx:id="pricefield" layoutX="333.0" layoutY="18.0" prefHeight="26.0" prefWidth="90.0" promptText="0.0$">
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
          </TextField>
-         <TextField layoutX="333.0" layoutY="56.0" prefHeight="26.0" prefWidth="90.0" promptText="0">
+         <TextField fx:id="stockfield" layoutX="333.0" layoutY="56.0" prefHeight="26.0" prefWidth="90.0" promptText="0">
             <cursor>
                <Cursor fx:constant="TEXT" />
             </cursor>
@@ -88,8 +99,11 @@
                   </color>
                </DropShadow>
             </effect>
+            <children>
+               <ImageView fx:id="ProductsImageView" fitHeight="85.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
          </AnchorPane>
-         <Button fx:id="manageproduct_import" layoutX="564.0" layoutY="111.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="Import">
+         <Button fx:id="ImportButton" layoutX="564.0" layoutY="111.0" mnemonicParsing="false" onAction="#OnImportButton" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="Import">
             <effect>
                <DropShadow>
                   <color>
@@ -101,12 +115,12 @@
                <Cursor fx:constant="HAND" />
             </cursor>
          </Button>
-         <Button fx:id="manageproduct_add" layoutX="48.0" layoutY="111.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="ADD">
+         <Button fx:id="AddButton" layoutX="48.0" layoutY="111.0" mnemonicParsing="false" onAction="#OnAddButton" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="ADD">
             <font>
                <Font size="14.0" />
             </font>
             <cursor>
-               <Cursor fx:constant="DISAPPEAR" />
+               <Cursor fx:constant="HAND" />
             </cursor>
             <effect>
                <DropShadow>
@@ -116,7 +130,7 @@
                </DropShadow>
             </effect>
          </Button>
-         <Button fx:id="manageproduct_update" layoutX="157.0" layoutY="111.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="UPDATE">
+         <Button fx:id="UpdateButton" layoutX="128.0" layoutY="109.0" mnemonicParsing="false" onAction="#OnUpdateButton" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="UPDATE">
             <font>
                <Font size="14.0" />
             </font>
@@ -128,10 +142,10 @@
                </DropShadow>
             </effect>
             <cursor>
-               <Cursor fx:constant="DISAPPEAR" />
+               <Cursor fx:constant="HAND" />
             </cursor>
          </Button>
-         <Button fx:id="manageproduct_delete" layoutX="280.0" layoutY="111.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="DELETE">
+         <Button fx:id="ClearButton" layoutX="301.0" layoutY="109.0" mnemonicParsing="false" onAction="#OnClearButton" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="CLEAR">
             <font>
                <Font size="14.0" />
             </font>
@@ -143,7 +157,22 @@
                </DropShadow>
             </effect>
             <cursor>
-               <Cursor fx:constant="DISAPPEAR" />
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="DeleteButton" layoutX="391.0" layoutY="109.0" mnemonicParsing="false" onAction="#OnDeleteButton" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="DELETE">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.5882353186607361" green="0.5882353186607361" blue="0.5882353186607361" />
+                  </color>
+               </DropShadow>
+            </effect>
+            <cursor>
+               <Cursor fx:constant="HAND" />
             </cursor>
          </Button>
       </AnchorPane>

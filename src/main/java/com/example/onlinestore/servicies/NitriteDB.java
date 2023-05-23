@@ -29,6 +29,7 @@ public class NitriteDB {
         return userRepository.find(ObjectFilters.eq("username", username)).firstOrDefault();
     }
 
+
     public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
         userRepository.insert(new User(username, encodePassword(username, password), role));
