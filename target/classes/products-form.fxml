@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="474.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.ProductsController">
+   <children>
+      <ImageView fitHeight="474.0" fitWidth="833.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@homepage.jpg" />
+         </image></ImageView>
+      <ScrollPane layoutX="12.0" layoutY="59.0" prefHeight="370.0" prefWidth="680.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="679.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@redlipstick.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Red Lipstick">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font></Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 50$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="105.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pinklipstick.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Pink Lipstick">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 45$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="196.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@gloss.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Gloss">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 35$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="285.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@mattelipstick.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Matte Lipstick">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 67$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="385.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@blackmascara.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Black Mascara">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 25$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="478.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@longlashes.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Long Lashes">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 55$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="572.0" layoutY="14.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@lashes.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Lashes">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 25$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="14.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@facecream.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Face Cream">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 32$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="105.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@foundation.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Foundation">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 55$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="196.0" layoutY="188.0" prefHeight="158.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@blush.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Blush">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 39$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="385.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@iluminator.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Iluminator">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 60$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="285.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@blushpalette.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Blush palette">
+                           <font>
+                              <Font name="Arial" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 50$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="478.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@eyeshadow.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Eyeshadow">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 80$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="572.0" layoutY="185.0" prefHeight="163.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="95.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@remover.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="10.0" prefWidth="67.0" text="Remover">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="9.0" prefWidth="66.0" text="Price: 25$" />
+                        <Button mnemonicParsing="false" text="Add to cart" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="HomeButtonFromProducts" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#onHomeButtonFromProductsClick" prefHeight="25.0" prefWidth="69.0" text="Home" />
+      <Button fx:id="CartButtonFromProducts" layoutX="622.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCartButtonFromProductsClick" prefHeight="25.0" prefWidth="69.0" text="Cart" />
+      <Label layoutX="277.0" layoutY="4.0" prefHeight="44.0" prefWidth="150.0" text="Products" textFill="#4b1162">
+         <font>
+            <Font name="Bodoni Bd BT Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="ManageProductsButton" layoutX="501.0" layoutY="13.0" mnemonicParsing="false" onAction="#OnManageProductsButtonClick" text="Manage Products" />
+   </children>
+</AnchorPane>
