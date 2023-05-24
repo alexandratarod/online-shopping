@@ -38,6 +38,18 @@ public class HomePageController {
         stage.show();
 
     }
+    @FXML
+    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-form.fxml"));
+
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene) ;
+        stage.show();
+
+    }
 
 }
 
