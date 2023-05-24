@@ -25,6 +25,12 @@ public class Product {
         this.picture = "";
     }
 
+    public Product(String productName, double price, String picture){
+        this.productName = productName;
+        this.price = price;
+        this.picture = picture;
+    }
+
     public String getProductId() {
         return productId;
     }

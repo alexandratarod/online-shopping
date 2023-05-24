@@ -1,8 +1,7 @@
 package com.example.onlinestore.controllers;
 
-import com.example.onlinestore.Main;
 import com.example.onlinestore.exceptions.UsernameAlreadyExistsException;
-import com.example.onlinestore.model.Data;
+import com.example.onlinestore.model.UserData;
 import com.example.onlinestore.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -94,7 +93,8 @@ public class LoginController {
         } else {
             String hashedPassword = encodePassword(username, password);
             if (user.getPassword().equals(hashedPassword) && user.getUsername().equals(username) && user.getRole().equals((String) rolecombobox.getValue()) ) {
-                Data.username = username;
+                UserData.username = username;
+                //UserData.role = user.getRole();
                 FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("homepage-form.fxml"));
                 root = loader.load();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

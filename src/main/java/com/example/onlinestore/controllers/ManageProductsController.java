@@ -1,6 +1,6 @@
 package com.example.onlinestore.controllers;
 
-import com.example.onlinestore.model.Data;
+import com.example.onlinestore.model.UserData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,7 +22,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import com.example.onlinestore.servicies.ProductDatabase;
 import com.example.onlinestore.model.Product;
-import org.dizitart.no2.objects.filters.ObjectFilters;
 
 import java.io.File;
 import java.io.IOException;
@@ -91,12 +90,8 @@ public class ManageProductsController implements Initializable {
 
     private Image image;
 
-    /*private ObservableList<Product> productslist;
-    public ObservableList<Product> manageProductsDataList() {
-        productslist = FXCollections.observableArrayList();
-        productslist.addAll(ProductDatabase.getAllProducts());
-        return productslist;
-    }*/
+    private ObservableList<Product> cardlist = FXCollections.observableArrayList();
+
 
     private ObservableList<Product> productslistdata;
     public void manageProductsShowData() {
@@ -107,6 +102,8 @@ public class ManageProductsController implements Initializable {
 
         productslistdata = FXCollections.observableArrayList(ProductDatabase.getAllProducts());
         ProductsTableView.setItems(productslistdata);
+
+        cardlist.addAll(productslistdata);
     }
 
 
@@ -164,7 +161,7 @@ public class ManageProductsController implements Initializable {
         File file = OpenFile.showOpenDialog(manageproductsform.getScene().getWindow());
 
         if(file != null) {
-            Data.path = file.getAbsolutePath();
+            UserData.path = file.getAbsolutePath();
 
          image = new Image(file.toURI().toString(),77, 85, false, true);
 
@@ -202,6 +199,11 @@ public class ManageProductsController implements Initializable {
             clearFields();
         }
     }
+
+    public ObservableList<Product> getCardList() {
+        return cardlist;
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
