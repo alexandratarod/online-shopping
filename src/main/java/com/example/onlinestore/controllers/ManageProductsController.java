@@ -160,8 +160,26 @@ public class ManageProductsController implements Initializable {
 
     @FXML
     public void OnDeleteButton(ActionEvent event) {
+        // Get the selected product from the TableView
+        Product selectedProduct = ProductsTableView.getSelectionModel().getSelectedItem();
 
+        if (selectedProduct != null) {
+            // Get the product ID
+            String productId = selectedProduct.getProductId();
+            Product product = ProductDatabase.getProductById(productId);
+
+            // Delete the product from the database
+            //ProductDatabase db = new ProductDatabase();
+            ProductDatabase.deleteProduct(product);
+
+            // Remove the product from the TableView
+            ProductsTableView.getItems().remove(selectedProduct);
+
+            // Clear the input fields
+            clearFields();
+        }
     }
+
 
 
 
@@ -184,10 +202,10 @@ public class ManageProductsController implements Initializable {
     @FXML
     public void OnUpdateButton(ActionEvent event) {
         // Get the selected product from the TableView
-        Object selectedProduct = ProductsTableView.getSelectionModel().getSelectedItem();
+        Product selectedProduct = ProductsTableView.getSelectionModel().getSelectedItem();
 
-        if (selectedProduct != null && selectedProduct instanceof Product) {
-            Product productToUpdate = (Product) selectedProduct;
+        if (selectedProduct != null) {
+            Product product = ProductDatabase.getProductById(selectedProduct.getProductId());
 
             // Retrieve updated values from input fields
             String newProductId = idproductfield.getText();
@@ -197,13 +215,13 @@ public class ManageProductsController implements Initializable {
 
 
             // Update the product object
-            productToUpdate.setProductId(newProductId);
-            productToUpdate.setProductName(newProductName);
-            productToUpdate.setPrice(newPrice);
-            productToUpdate.setStock(newStock);
+            product.setProductId(newProductId);
+            product.setProductName(newProductName);
+            product.setPrice(newPrice);
+            product.setStock(newStock);
 
             // Update the product in the database
-            ProductDatabase.updateProduct(productToUpdate);
+            ProductDatabase.updateProduct(product);
 
             // Refresh the TableView
             ProductsTableView.refresh();

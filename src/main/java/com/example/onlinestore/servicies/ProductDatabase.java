@@ -32,7 +32,10 @@ public class ProductDatabase {
     }
 
     public static void deleteProduct(Product product) {
-        productRepository.remove(product);
+        if(product != null)
+        {
+            productRepository.remove(product);
+        }
     }
 
     public static List<Product> getAllProducts() {
@@ -40,6 +43,6 @@ public class ProductDatabase {
     }
 
     public static Product getProductById(String productId) {
-        return productRepository.find(ObjectFilters.eq("id", productId)).firstOrDefault();
+        return productRepository.find(ObjectFilters.eq("productId", productId)).firstOrDefault();
     }
 }

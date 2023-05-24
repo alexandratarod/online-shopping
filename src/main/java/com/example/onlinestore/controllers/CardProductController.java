@@ -48,7 +48,8 @@ public class CardProductController {
 
 
         if(prodData.getPicture().isEmpty()){
-            image = new Image("file:/C:/Users/ALEXANDRA/IdeaProjects/online-store/src/main/resources/nophoto.jpg", 130, 147, false, true);
+            String imagePath = "/nophoto.jpg";
+            Image image = new Image(getClass().getResourceAsStream(imagePath), 130, 147, false, true);
             ImageView_product.setImage(image);
         }
         else {

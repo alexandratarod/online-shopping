@@ -1,8 +1,10 @@
 package com.example.onlinestore.model;
 
 import javafx.scene.image.Image;
+import org.dizitart.no2.objects.Id;
 
 public class Product {
+    @Id
     private String productId;
     private String productName;
     private double price;
