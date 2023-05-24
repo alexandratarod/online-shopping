@@ -1,4 +1,4 @@
-package com.example.onlinestore;
+package com.example.onlinestore.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,7 +24,7 @@ public class PlaceOrderController {
     @FXML
     protected void onCartButtonFromPlaceOrderClick(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-form.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("cart-form.fxml"));
 
 
         root = loader.load();

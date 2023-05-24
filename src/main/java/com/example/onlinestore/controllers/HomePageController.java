@@ -1,4 +1,4 @@
-package com.example.onlinestore;
+package com.example.onlinestore.controllers;
 
 
 import javafx.event.ActionEvent;
@@ -25,7 +25,7 @@ public class HomePageController {
     @FXML
     protected void onOurProductsButtonClick(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("products-form.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("products-form.fxml"));
         // root = FXMLLoader.load(getClass().getResource("homepage-form.fxml"));
 
         //ProdutctsApplication homepageapplication = loader.getController();

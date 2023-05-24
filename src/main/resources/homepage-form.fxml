@@ -8,11 +8,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="homepageform" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.HomePageController">
+<AnchorPane fx:id="homepageform" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.HomePageController">
    <children>
       <ImageView fitHeight="556.0" fitWidth="807.0" layoutX="-80.0" layoutY="-62.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../homepage.jpg" />
+            <Image url="@homepage.jpg" />
          </image>
       </ImageView>
       <Label fx:id="welcometext" layoutX="149.0" layoutY="57.0" text="Welcome to A&amp;F Makeup Store!" textFill="#5b246b">
@@ -31,12 +31,12 @@
          </font></Button>
       <ImageView fx:id="lipstickphoto" fitHeight="145.0" fitWidth="206.0" layoutX="36.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../lipstick.jpeg" />
+            <Image url="@lipstick.jpeg" />
          </image>
       </ImageView>
       <ImageView fx:id="mascaraphoto" fitHeight="148.0" fitWidth="206.0" layoutX="486.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../mascara.jpg" />
+            <Image url="@mascara.jpg" />
          </image>
       </ImageView>
    </children>
