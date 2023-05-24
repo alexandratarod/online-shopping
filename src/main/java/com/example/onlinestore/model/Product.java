@@ -28,7 +28,7 @@ public class Product {
     public Product(String productName, double price, String picture){
         this.productName = productName;
         this.price = price;
-        this.picture = picture;
+        setPicture(picture);
     }
 
     public String getProductId() {
@@ -70,4 +70,7 @@ public class Product {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
+
+
 }

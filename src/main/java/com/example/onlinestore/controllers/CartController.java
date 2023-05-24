@@ -28,8 +28,6 @@ public class CartController {
     protected void onPlaceorderButtonFromCartClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("placeorder-form.fxml"));
-
-
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -42,7 +40,6 @@ public class CartController {
     protected void onProductsButtonFromCartClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("products-form.fxml"));
-
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

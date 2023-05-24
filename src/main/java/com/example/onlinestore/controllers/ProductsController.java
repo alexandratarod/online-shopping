@@ -13,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -47,9 +48,6 @@ public class ProductsController implements Initializable {
     protected void onHomeButtonFromProductsClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("homepage-form.fxml"));
-
-
-
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -62,7 +60,6 @@ public class ProductsController implements Initializable {
     protected void onCartButtonFromProductsClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("cart-form.fxml"));
-
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -73,8 +70,8 @@ public class ProductsController implements Initializable {
 
     @FXML
     protected void OnManageProductsButtonClick(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("manageproducts-form.fxml"));
 
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("manageproducts-form.fxml"));
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -112,16 +109,18 @@ public class ProductsController implements Initializable {
         {
             try{
                 FXMLLoader load = new FXMLLoader();
-                load.setLocation(getClass().getResource("cardProduct.fxml"));
+                load.setLocation(getClass().getClassLoader().getResource("cardProduct.fxml"));
                 AnchorPane pane = load.load();
                 CardProductController cardc = load.getController();
                 cardc.SetData(cardlist.get(q));
 
-                if(column == 3)
+                if(column == 5)
                 {
                     column = 0;
                     row += 1;
                 }
+
+
 
                 productsMenu.add(pane, column++, row);
 
@@ -130,6 +129,12 @@ public class ProductsController implements Initializable {
             }
         }
     }
+
+
+
+
+
+
 
     public ObservableList<Product> menuGetData() {
         try {

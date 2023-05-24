@@ -62,22 +62,17 @@ public class LoginController {
             registration.setText(e.getMessage());
         }
 
+        clearFields();
 
+    }
+
+    private void clearFields() {
+        usernamefield.clear();
+        passwordfield.clear();
     }
 
     @FXML
     public void onLoginButtonClick(ActionEvent event) throws IOException {
-
-        /*FXMLLoader loader = new FXMLLoader(getClass().getResource("homepage-form.fxml"));
-        root = loader.load();
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        */
-
-
-
 
         String username = usernamefield.getText();
         String password = passwordfield.getText();

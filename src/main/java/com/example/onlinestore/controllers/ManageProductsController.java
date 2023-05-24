@@ -79,6 +79,8 @@ public class ManageProductsController implements Initializable {
     @FXML
     private TextField stockfield;
 
+
+
     @FXML
     private AnchorPane manageproductsform;
 
@@ -121,17 +123,26 @@ public class ManageProductsController implements Initializable {
 
     @FXML
     public void OnAddButton(ActionEvent event){
+
         String productId = idproductfield.getText();
         String productName = productnamefield.getText();
         double price = Double.parseDouble(pricefield.getText());
         int stock = Integer.parseInt(stockfield.getText());
-        String picture = ""; // Set the picture value here
+        String picture = "";
+
+        Image image = ProductsImageView.getImage();
+        if (image != null) {
+            picture = image.getUrl().toString();
+        }
+
 
         Product product = new Product(productId, productName, price, stock, picture);
 
         ProductDatabase.addProduct(product); // Call the method to add the product to the database
 
         clearFields(); // Clear the input fields after adding the product
+
+
     }
 
     private void clearFields() {
@@ -139,6 +150,7 @@ public class ManageProductsController implements Initializable {
         productnamefield.clear();
         pricefield.clear();
         stockfield.clear();
+
     }
 
     @FXML
@@ -156,7 +168,7 @@ public class ManageProductsController implements Initializable {
     @FXML
     public void OnImportButton(ActionEvent event) {
        FileChooser OpenFile = new FileChooser();
-        OpenFile.getExtensionFilters().add(new FileChooser.ExtensionFilter("Open Image File", "*png", "*jpg"));
+        OpenFile.getExtensionFilters().add(new FileChooser.ExtensionFilter("Open Image File", "*png", "*jpg", "*.jpeg"));
 
         File file = OpenFile.showOpenDialog(manageproductsform.getScene().getWindow());
 
@@ -182,6 +194,7 @@ public class ManageProductsController implements Initializable {
             String newProductName = productnamefield.getText();
             double newPrice = Double.parseDouble(pricefield.getText());
             int newStock = Integer.parseInt(stockfield.getText());
+
 
             // Update the product object
             productToUpdate.setProductId(newProductId);
