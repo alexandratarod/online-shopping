@@ -97,6 +97,7 @@ public class ManageProductsController implements Initializable {
 
     private ObservableList<Product> productslistdata;
     public void manageProductsShowData() {
+
         IDProduct_col.setCellValueFactory(new PropertyValueFactory<>("productId"));
         ProductName_col.setCellValueFactory(new PropertyValueFactory<>("productName"));
         Price_col.setCellValueFactory(new PropertyValueFactory<>("price"));

@@ -133,9 +133,6 @@ public class ProductsController implements Initializable {
 
 
 
-
-
-
     public ObservableList<Product> menuGetData() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("manageproducts-form.fxml"));

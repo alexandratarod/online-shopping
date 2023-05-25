@@ -12,14 +12,14 @@
             <Image url="@homepage.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="68.0" layoutY="256.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="city_field" layoutX="68.0" layoutY="256.0" prefHeight="25.0" prefWidth="128.0" />
       <Label layoutX="246.0" layoutY="22.0" text="Finish order" textFill="#4b1162">
          <font>
             <Font name="Bodoni Bd BT Bold" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="CartButtonFromPlaceOrder" layoutX="31.0" layoutY="31.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="74.0" text="Cart" onAction="#onCartButtonFromPlaceOrderClick"/>
-      <Button layoutX="532.0" layoutY="345.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="117.0" text="Place order" />
+      <Button fx:id="CartButtonFromPlaceOrder" layoutX="31.0" layoutY="31.0" mnemonicParsing="false" onAction="#onCartButtonFromPlaceOrderClick" prefHeight="25.0" prefWidth="74.0" text="Cart" />
+      <Button layoutX="532.0" layoutY="345.0" mnemonicParsing="false" onAction="#onPlaceOrderButtonClick" prefHeight="57.0" prefWidth="117.0" text="Place order" />
       <Label layoutX="184.0" layoutY="102.0" text="Please, provide us your delivery details!" textFill="#770404">
          <font>
             <Font name="Perpetua" size="24.0" />
@@ -30,25 +30,25 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="68.0" layoutY="320.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="street_field" layoutX="68.0" layoutY="320.0" prefHeight="25.0" prefWidth="128.0" />
       <Label layoutX="68.0" layoutY="292.0" text="Street, number:">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="229.0" layoutY="321.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="postalcode_field" layoutX="229.0" layoutY="321.0" prefHeight="25.0" prefWidth="128.0" />
       <Label layoutX="229.0" layoutY="293.0" text="Postal code:">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="68.0" layoutY="195.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="firstname_field" layoutX="68.0" layoutY="195.0" prefHeight="25.0" prefWidth="128.0" />
       <Label layoutX="68.0" layoutY="167.0" text="First Name:">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="229.0" layoutY="196.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="lastname_field" layoutX="229.0" layoutY="196.0" prefHeight="25.0" prefWidth="128.0" />
       <Label layoutX="229.0" layoutY="168.0" text="Last Name:">
          <font>
             <Font name="Arial" size="14.0" />

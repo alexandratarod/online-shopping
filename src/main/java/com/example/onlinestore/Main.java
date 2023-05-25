@@ -2,6 +2,7 @@ package com.example.onlinestore;
 
 import com.example.onlinestore.servicies.FileSystemService;
 import com.example.onlinestore.servicies.NitriteDB;
+import com.example.onlinestore.servicies.OrdersDatabase;
 import com.example.onlinestore.servicies.ProductDatabase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ public class Main extends Application {
         initDirectory();
         NitriteDB.initDatabase();
         ProductDatabase.initDatabase();
+        OrdersDatabase.initDatabase();
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-form.fxml"));
         Scene scene = new Scene(loader.load(), 700, 410);
         stage.setTitle("A&F Makeup Store");

@@ -37,6 +37,5 @@
          </image>
       </ImageView>
       <Button fx:id="logoutButton" layoutX="36.0" layoutY="25.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="31.0" prefWidth="79.0" text="Logout" />
-      <Button fx:id="ordersButton" layoutX="612.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Orders" onAction="#onOrdersButtonClick" />
    </children>
 </AnchorPane>

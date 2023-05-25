@@ -19,6 +19,12 @@ public class Product {
         this.picture = picture;
     }
 
+    public Product(String productName, double price){
+
+        this.productName=productName;
+        this.price=price;
+    }
+
     public Product(){
         this.productId = "";
         this.productName = "";

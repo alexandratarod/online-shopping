@@ -15,7 +15,7 @@
             </AnchorPane>
             <Label fx:id="productNameLabel" alignment="CENTER" prefHeight="18.0" prefWidth="131.0" text="productName" />
             <Label fx:id="productPriceLabel" alignment="CENTER" prefHeight="18.0" prefWidth="130.0" text="productPrice" />
-            <Button fx:id="AddToCartButton" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Add to Cart" textAlignment="CENTER" />
+            <Button fx:id="AddToCartButton" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Add to Cart" textAlignment="CENTER" onAction="#onAddToCartButtonClick" />
          </children>
       </VBox>
    </children>
