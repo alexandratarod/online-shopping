@@ -32,6 +32,12 @@ public class ProductsController implements Initializable {
     private Button CartButtonFromProductsClick;
 
     @FXML
+    private Button OrdersForAdminButton;
+
+    @FXML
+    private Button OrdersForClientButton;
+
+    @FXML
     private Button ManageProductsButton;
 
     @FXML
@@ -79,6 +85,28 @@ public class ProductsController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    protected void OnOrdersForAdminButton(ActionEvent event) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("OrdersAdmin.fxml"));
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void OnOrdersForClientButton(ActionEvent event) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ordersClient.fxml"));
+        root = loader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         manageButtonVisibility();
@@ -90,10 +118,13 @@ public class ProductsController implements Initializable {
         User currentUser = db.getUser(UserData.username);
         if (currentUser != null && currentUser.getRole().equals("Admin")) {
             ManageProductsButton.setVisible(true);
+            OrdersForClientButton.setVisible(false);
         } else {
             ManageProductsButton.setVisible(false);
+            OrdersForAdminButton.setVisible(false);
         }
     }
+
 
     public void menuDisplayCard(){
         cardlist.clear();
