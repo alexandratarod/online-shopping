@@ -26,10 +26,6 @@ public class HomePageController {
     protected void onOurProductsButtonClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("products-form.fxml"));
-        // root = FXMLLoader.load(getClass().getResource("homepage-form.fxml"));
-
-        //ProdutctsApplication homepageapplication = loader.getController();
-
 
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -50,6 +46,8 @@ public class HomePageController {
         stage.show();
 
     }
+
+
 
 }
 

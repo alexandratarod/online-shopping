@@ -79,7 +79,7 @@ public class CartController implements Initializable {
         CartTableView.setItems(cartList);
     }
 
-    public double calculateTotalPrice(){
+    public static double calculateTotalPrice(){
 
         double total_price = 0;
 
