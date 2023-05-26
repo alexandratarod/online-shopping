@@ -107,9 +107,9 @@ public class CartController implements Initializable {
     }
 
 
+    public String getTotalPriceLabelText() {
 
-
-
-
+        return String.valueOf(calculateTotalPrice());
+    }
 }
 

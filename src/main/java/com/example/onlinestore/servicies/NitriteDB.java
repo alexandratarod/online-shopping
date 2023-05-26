@@ -63,6 +63,10 @@ public class NitriteDB {
         return md;
     }
 
+    public ObjectRepository<User> getUserRepository() {
+        return userRepository;
+    }
+
 
 
 
