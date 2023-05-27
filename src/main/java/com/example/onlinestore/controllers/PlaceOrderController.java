@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -76,13 +77,24 @@ public class PlaceOrderController  {
         double totalPrice = calculateTotalPrice();
         String address = city_field.getText() + " " + street_field.getText() + " " + postalcode_field.getText();
         //String clientID = UserData.username;
-        Orders order = new Orders(clientName, totalPrice, address, cartList);
 
-        OrdersDatabase.addOrder(order); // Call the method to add the product to the database
-
-        clearFields();
-
+        if ((firstname_field.getText()).isEmpty()
+                || (lastname_field.getText().isEmpty())
+                || ((city_field.getText()).trim()).isEmpty()
+                || (street_field).getText().trim().isEmpty()
+                || (postalcode_field.getText().trim().isEmpty())) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Invalid Data");
+            alert.setHeaderText(null);
+            alert.setContentText("Please fill in all the required fields.");
+            alert.showAndWait();
+        } else {
+            Orders order = new Orders(clientName, totalPrice, address, cartList);
+            OrdersDatabase.addOrder(order); // Call the method to add the product to the database
+            clearFields();
+        }
     }
+
     private void clearFields() {
         firstname_field.clear();
         lastname_field.clear();
