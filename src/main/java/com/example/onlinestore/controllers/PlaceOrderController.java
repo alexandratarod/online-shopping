@@ -2,6 +2,7 @@ package com.example.onlinestore.controllers;
 
 import com.example.onlinestore.model.Orders;
 import com.example.onlinestore.model.Product;
+import com.example.onlinestore.model.UserData;
 import com.example.onlinestore.servicies.NitriteDB;
 import com.example.onlinestore.servicies.OrdersDatabase;
 import com.example.onlinestore.servicies.ProductDatabase;
@@ -74,7 +75,7 @@ public class PlaceOrderController  {
         String clientName = firstname_field.getText() + " " + lastname_field.getText();
         double totalPrice = calculateTotalPrice();
         String address = city_field.getText() + " " + street_field.getText() + " " + postalcode_field.getText();
-
+        //String clientID = UserData.username;
         Orders order = new Orders(clientName, totalPrice, address, cartList);
 
         OrdersDatabase.addOrder(order); // Call the method to add the product to the database
