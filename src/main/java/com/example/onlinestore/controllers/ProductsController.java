@@ -51,7 +51,7 @@ public class ProductsController implements Initializable {
     private ObservableList<Product> cardlist = FXCollections.observableArrayList();
 
     @FXML
-    protected void onHomeButtonFromProductsClick(ActionEvent event) throws IOException {
+    public void onHomeButtonFromProductsClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("homepage-form.fxml"));
         root = loader.load();
@@ -63,7 +63,7 @@ public class ProductsController implements Initializable {
     }
 
     @FXML
-    protected void onCartButtonFromProductsClick(ActionEvent event) throws IOException {
+    public void onCartButtonFromProductsClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("cart-form.fxml"));
         root = loader.load();
@@ -75,7 +75,7 @@ public class ProductsController implements Initializable {
     }
 
     @FXML
-    protected void OnManageProductsButtonClick(ActionEvent event) throws IOException{
+    public void OnManageProductsButtonClick(ActionEvent event) throws IOException{
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("manageproducts-form.fxml"));
         root = loader.load();
@@ -86,7 +86,7 @@ public class ProductsController implements Initializable {
     }
 
     @FXML
-    protected void OnOrdersForAdminButton(ActionEvent event) throws IOException{
+    public void OnOrdersForAdminButton(ActionEvent event) throws IOException{
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("OrdersAdmin.fxml"));
         root = loader.load();
@@ -97,7 +97,7 @@ public class ProductsController implements Initializable {
     }
 
     @FXML
-    protected void OnOrdersForClientButton(ActionEvent event) throws IOException{
+    public void OnOrdersForClientButton(ActionEvent event) throws IOException{
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ordersClient.fxml"));
         root = loader.load();

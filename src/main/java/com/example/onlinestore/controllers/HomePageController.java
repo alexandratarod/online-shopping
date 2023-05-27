@@ -23,7 +23,7 @@ public class HomePageController {
     private Parent root;
 
     @FXML
-    protected void onOurProductsButtonClick(ActionEvent event) throws IOException {
+    public void onOurProductsButtonClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("products-form.fxml"));
 
@@ -35,7 +35,7 @@ public class HomePageController {
 
     }
     @FXML
-    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
+    public void onLogoutButtonClick(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login-form.fxml"));
 
