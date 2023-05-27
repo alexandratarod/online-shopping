@@ -74,6 +74,8 @@ public class OrdersClientController implements Initializable {
         List<Orders> clientOrders = OrdersDatabase.getOrdersByClientId(UserData.username);
         ObservableList<Orders> orderslistdata = FXCollections.observableArrayList(clientOrders);
         MyOrders_TableView.setItems(orderslistdata);
+
+
     }
 
     @Override

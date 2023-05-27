@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 
 public class OrdersAdminController implements Initializable {
     @FXML
-    private TableColumn<Orders, String> Address_column;
+    private TableColumn<Orders, String> Address_Column;
 
     @FXML
     private TableColumn<Orders, String> ClientID_Column;
@@ -30,7 +30,7 @@ public class OrdersAdminController implements Initializable {
     private Button ApplyButton;
 
     @FXML
-    private TableColumn<Orders, String> Customer_Column;
+    private TableColumn<Orders, String> ClientName_Column;
 
     @FXML
     private Button HomeButton;
@@ -76,15 +76,17 @@ public class OrdersAdminController implements Initializable {
     public void OrdersShowData() {
 
         OrderID_column.setCellValueFactory(new PropertyValueFactory<>("orderId"));
-        //ProductsID_column.setCellValueFactory(new PropertyValueFactory<>("productsID"));
-        //ClientID_Column.setCellValueFactory(new PropertyValueFactory<>("clientID"));
-        //Address_column.setCellValueFactory(new PropertyValueFactory<>("address"));
-        //Customer_Column.setCellValueFactory(new PropertyValueFactory<>("clientName"));
+       // ProductsID_column.setCellValueFactory(new PropertyValueFactory<>("productsID"));
+       // ClientID_Column.setCellValueFactory(new PropertyValueFactory<>("clientID"));
+        Address_Column.setCellValueFactory(new PropertyValueFactory<>("address"));
+        ClientName_Column.setCellValueFactory(new PropertyValueFactory<>("clientName"));
         TotalPrice_Column.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
         //Status_Column.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         ObservableList<Orders> orderslistdata = FXCollections.observableArrayList(OrdersDatabase.getAllOrders());
         Orders_TableView.setItems(orderslistdata);
+
+
     }
 
     private void initializeOrderStatusChoiceBox() {

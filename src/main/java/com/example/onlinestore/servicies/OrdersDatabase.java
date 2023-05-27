@@ -20,7 +20,7 @@ public class OrdersDatabase {
 
     private String clientID;
 
-    private static int nextOrderId = 1;
+    private static int nextOrderId;
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
@@ -43,13 +43,22 @@ public class OrdersDatabase {
 
     public static void addOrder(Orders order) {
 
+
+        if (nextOrderId == 0) {
+            // Find the maximum orderId in the collection
+            int maxOrderId = orderRepository.find().toList().stream()
+                    .mapToInt(Orders::getOrderId)
+                    .max()
+                    .orElse(0);
+            nextOrderId = maxOrderId + 1;
+        }
         order.setOrderId(nextOrderId++);
         orderRepository.insert(order);
     }
 
     public static List<Orders> getOrdersByClientId(String username) {
         List<Orders> orders = new ArrayList<>();
-        for (Orders order : orderRepository.find(ObjectFilters.eq("ClientID", username))) {
+        for (Orders order : orderRepository.find(ObjectFilters.eq("username", username))) {
             orders.add(order);
         }
         return orders;
