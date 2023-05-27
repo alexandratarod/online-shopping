@@ -14,45 +14,45 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.onlinestore.controllers.OrdersAdminController">
-   <children>
-      <ImageView fitHeight="490.0" fitWidth="721.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@homepage.jpg" />
-         </image>
-      </ImageView>
-      <Button fx:id="HomeButton" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnHomeButton" prefHeight="28.0" prefWidth="53.0" text="Home" />
-      <Label layoutX="316.0" layoutY="42.0" text="Orders" textFill="#00585e">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="25.0" layoutY="119.0" prefHeight="200.0" prefWidth="672.0">
-         <children>
-            <ScrollPane layoutX="236.0" prefHeight="200.0" prefWidth="672.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <content>
-                  <TableView prefHeight="200.0" prefWidth="670.0">
-                    <columns>
-                      <TableColumn prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Order ID" />
-                      <TableColumn prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Products ID" />
-                        <TableColumn prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Products Name" />
-                        <TableColumn prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Adress" />
-                        <TableColumn minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Customer" />
-                        <TableColumn minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Total Price" />
-                        <TableColumn minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Status" />
-                    </columns>
-                  </TableView>
-               </content>
-            </ScrollPane>
-         </children>
-      </AnchorPane>
-      <ChoiceBox fx:id="SelectOrderStatusChoiceBox" layoutX="284.0" layoutY="353.0" prefWidth="150.0" />
-      <Button fx:id="ApplyButton" layoutX="454.0" layoutY="353.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="Apply">
-         <effect>
-            <DropShadow />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Label layoutX="185.0" layoutY="352.0" prefHeight="26.0" prefWidth="98.0" text="Set Order Status:" />
-   </children>
+    <children>
+        <ImageView fitHeight="490.0" fitWidth="721.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@homepage.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="HomeButton" layoutX="649.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnHomeButton" prefHeight="28.0" prefWidth="53.0" text="Home" />
+        <Label layoutX="316.0" layoutY="42.0" text="Orders" textFill="#00585e">
+            <font>
+                <Font size="29.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="25.0" layoutY="119.0" prefHeight="200.0" prefWidth="672.0">
+            <children>
+                <ScrollPane layoutX="236.0" prefHeight="200.0" prefWidth="672.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <TableView fx:id="Orders_TableView" prefHeight="200.0" prefWidth="670.0">
+                            <columns>
+                                <TableColumn fx:id="OrderID_column" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Order ID" />
+                                <TableColumn fx:id="ProductsID_column" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Products ID" />
+                                <TableColumn fx:id="ClientID_Column" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Client ID" />
+                                <TableColumn fx:id="ClientName_Column" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Client Name" />
+                                <TableColumn fx:id="Address_Column" minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Address" />
+                                <TableColumn fx:id="TotalPrice_Column" minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Total Price" />
+                                <TableColumn fx:id="Status_Column" minWidth="0.0" prefWidth="95.0" style="-fx-background-color: #FF5F9E;" text="Status" />
+                            </columns>
+                        </TableView>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+        <ChoiceBox fx:id="SelectOrderStatusChoiceBox" layoutX="284.0" layoutY="353.0" prefWidth="150.0" />
+        <Button fx:id="ApplyButton" layoutX="454.0" layoutY="353.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom right ,#FFB0AE , #FF5F9E);" text="Apply">
+            <effect>
+                <DropShadow />
+            </effect>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label layoutX="185.0" layoutY="352.0" prefHeight="26.0" prefWidth="98.0" text="Set Order Status:" />
+    </children>
 </AnchorPane>

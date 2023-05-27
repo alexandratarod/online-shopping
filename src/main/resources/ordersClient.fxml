@@ -27,13 +27,13 @@
             <children>
                 <ScrollPane layoutX="236.0" prefHeight="200.0" prefWidth="672.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <content>
-                        <TableView prefHeight="264.0" prefWidth="670.0">
+                        <TableView fx:id="MyOrders_TableView" prefHeight="264.0" prefWidth="670.0">
                             <columns>
-                                <TableColumn prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Order ID" />
-                                <TableColumn prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Products ID" />
-                                <TableColumn prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Products Name" />
-                                <TableColumn minWidth="0.0" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Total Price" />
-                                <TableColumn minWidth="0.0" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Status" />
+                                <TableColumn fx:id="OrderID_Column" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Order ID" />
+                                <TableColumn fx:id="ProductsID_Column" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Products ID" />
+                                <TableColumn fx:id="ProductsName_Column" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Products Name" />
+                                <TableColumn fx:id="TotalPrice_Column" minWidth="0.0" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Total Price" />
+                                <TableColumn fx:id="Status_Column" minWidth="0.0" prefWidth="133.0" style="-fx-background-color: #FF5F9E;" text="Status" />
                             </columns>
                         </TableView>
                     </content>
